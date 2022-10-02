@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&display=swap" rel="stylesheet">
+    <title>Sign-up Form</title>
+</head>
+<body>
+    <div class="content">
+        <div class="side-bar">
+            <div class="title-div">
+                <img src="./img/island.svg" alt="logo TOP">
+                <h1>ODIN</h1>
+            </div>
+            <div class="footer">
+                Photo by <a href="https://unsplash.com/@aronvisuals?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aron Visuals</a>
+                 on <a href="https://unsplash.com/backgrounds?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> 
+            </div>
+        </div>  
+        <div class="main-content">
+            <div class="header-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis sem eu diam viverra ultrices. 
+                    Aenean dapibus mauris vitae justo vehicula, nec faucibus erat laoreet. Sed at eros efficitur, aliquam sapien eu, 
+                    mattis elit. <br> Sign up <em>now</em> to get started.</p>
+                <p>You <em>know</em> you want to.</p>
+            </div>
+            <form action="" method="post">
+                <h2>Let's do this !</h2>
+                <ul>
+                    <li>
+                        <label for="name">First Name</label>
+                        <input type="text" id="name" name="name">
+                    </li>
+                    <li>
+                        <label for="surname">Last Name</label>
+                        <input type="text" id="surname" name="surname">
+                    </li>
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="mail" id="email" name="email">
+                    </li>
+                    <li>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </li>
+                    <li>
+                        <label for="pwd">Password</label>
+                        <input type="password" id="pwd" name="password">
+                    </li>
+                    <li>
+                        <label for="pwd-conf">Confirm Password</label>
+                        <input type="password" id="pwd-conf" name="password-confirmation">
+                    </li>
+                </ul>
+            </form>
+            <div class="bottom-content">
+                <button type="submit">Create Account</button>
+                <p class="login">Already have an account ? <a href="">Log in</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
