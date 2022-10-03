@@ -4,6 +4,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+/* LEFT CONTENT */
 .content {
     display : flex;
 }
@@ -11,33 +12,35 @@ body {
 .side-bar {
     position: relative;
     min-width: 30vw;
-    flex-grow: 1;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(./img/aron-visuals-LSFuPFE9vKE-unsplash.jpg);
+    background-position: center center;
+    background-color: #464646;
     background-size: cover;
 }
 
 .title-div{
-    position: absolute;
     width: 100%;
     background-color: rgba(0,0,0, 0.3);
     color : white;
-    top : 5rem;
-    gap : 10px;
+    position: relative;
+    top : 150px;
     display: flex;
+    gap : 10px;
     justify-content: center;
     align-items: center;
     padding : 10px 0px;
 }
 
-img {
+.logo {
     height: auto;
     width: 20%;
 }
 
 .footer {
     position: absolute;
-    bottom: 5px;
+    font-size: 0.7rem;
+    bottom: 10px;
     left : 50%;
     transform: translateX(-50%);
     white-space:nowrap;
@@ -48,15 +51,28 @@ img {
     color: white;
 }
 
+
+/* RIGHT CONTENT */
 .main-content {
-    min-width: 70vw;
-    background-color: rgba(222, 243, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(152,201,219, 0.2);
+}
+.header-content {
+    flex : 0.7;
+    padding : 3rem 7rem 3rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 0.7rem;
 }
 
-.header-content {
-    flex-grow: 3;
-    padding : 50px 60px 20px 20px;
-    font-size: 18px;
+.form-div {
+    flex : 1;
+    background-color: white;
+    padding-left : 1.5rem;
+    padding-bottom : 2rem; 
+    box-shadow: 0px 15px 10px -15px rgb(118, 116, 116);
 }
 
 input, label, button, ul, li {
@@ -67,55 +83,73 @@ input, label, button, ul, li {
     margin : 0;
 }
 
-form {
-    height: 40vh;
-    background-color: white;
-    padding: 10px 60px 20px 20px;
-    box-shadow: 0px 15px 10px -15px rgb(212, 207, 207);
-}
-
 ul {
     display: grid;
-    grid-template-columns: 200px 200px;
-    /* grid-template-rows: 1fr 1fr; */
-    column-gap: 40px;
-    row-gap: 20px;
+    grid-template-columns: repeat(2, 12.5rem);
+    grid-template-rows: repeat(3, 2rem);
+    column-gap: 2.5rem;
+    row-gap: 1.5rem;
 }
-
 li {
     display: grid;
     list-style: none;
-}
-input{
-    width: 200px;
-}
+} 
 
 .bottom-content {
-    position: relative;
-}
-
-button {
-    padding : 10px 30px;
-    background-color: rgb(11,67,102);
-    color : white;
-    border: none;
-    border-radius: 5px;
-    position: relative;
-    top : 20px;
-    left : 20px
-}
-
-.login {
-    position: relative;
-    top : 30px;
-    left : 20px;
+    flex : 0.5;
+    padding-top: 1rem ;
+    padding-left : 1.5rem;
 }
 
 .bottom-content a, a.visited {
     color : rgb(11,67,102);
     text-decoration: none;
     font-weight: bold;
+} 
+input:focus {
+    border: 1px solid rgb(11,67,102);
+    outline:none;
+    border-radius: 2px;
+    box-shadow: 2px 4px 6px 0px rgb(11,67,102);
 }
 
 
+button {
+    padding : 0.6rem 2rem;
+    background-color: rgb(11,67,102);
+    color : white;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    top : 2rem;
+    left : 1.5rem;
+} 
 
+.login {
+    padding-top: 2rem;
+}
+
+
+input[type="password"].error + span::after {
+    content : "*Passwords do not match";
+    font-size: 10px;
+    color : red;
+
+}
+
+
+input[type="password"].valid + span::after {
+    content : "Passwords match !";
+    font-size: 10px;
+    color : green;
+
+}
+
+.valid {
+    border : 1px solid green;
+    border-radius: 2px;
+}
+.error {
+    border : 1px solid red;
+    border-radius: 2px;
+}

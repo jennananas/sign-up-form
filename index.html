@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&display=swap" rel="stylesheet">
+    <script src="./script.js" defer></script>
     <title>Sign-up Form</title>
 </head>
 <body>
     <div class="content">
         <div class="side-bar">
             <div class="title-div">
-                <img src="./img/island.svg" alt="logo TOP">
+                <img class="logo" src="./img/island.svg" alt="logo TOP">
                 <h1>ODIN</h1>
             </div>
             <div class="footer">
@@ -29,37 +30,43 @@
                     mattis elit. <br> Sign up <em>now</em> to get started.</p>
                 <p>You <em>know</em> you want to.</p>
             </div>
-            <form action="" method="post">
-                <h2>Let's do this !</h2>
-                <ul>
-                    <li>
-                        <label for="name">First Name</label>
-                        <input type="text" id="name" name="name">
-                    </li>
-                    <li>
-                        <label for="surname">Last Name</label>
-                        <input type="text" id="surname" name="surname">
-                    </li>
-                    <li>
-                        <label for="email">Email</label>
-                        <input type="mail" id="email" name="email">
-                    </li>
-                    <li>
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </li>
-                    <li>
-                        <label for="pwd">Password</label>
-                        <input type="password" id="pwd" name="password">
-                    </li>
-                    <li>
-                        <label for="pwd-conf">Confirm Password</label>
-                        <input type="password" id="pwd-conf" name="password-confirmation">
-                    </li>
-                </ul>
-            </form>
+            <div class="form-div">
+                <form action="" method="post">
+                    <h3>Let's do this !</h3>
+                    <ul>
+                        <li>
+                            <label for="name">First Name</label>
+                            <input type="text" id="name" name="name" autofocus>
+                        </li>
+                        <li>
+                            <label for="surname">Last Name</label>
+                            <input type="text" id="surname" name="surname">
+                        </li>
+                        <li>
+                            <label for="email">Email</label>
+                            <input type="mail" id="email" name="email">
+                        </li>
+                        <li>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </li>
+                        <li>
+                            <label for="pwd">Password</label>
+                            <input type="password" id="pwd" name="password">
+                            <span class="alert-pwd"></span>
+                        </li>
+                        <li>
+                            <label for="pwd-conf">Confirm Password</label>
+                            <input type="password" id="pwd-conf" name="password-confirmation">
+                        </li>
+                    </ul>
+                </div>
+                    <div class="button-submit">
+                        <button type="submit">Create Account</button>
+                    </div>
+                </form>
+            
             <div class="bottom-content">
-                <button type="submit">Create Account</button>
                 <p class="login">Already have an account ? <a href="">Log in</a></p>
             </div>
         </div>
