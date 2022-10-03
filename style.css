@@ -1,78 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root {
+    --left-margin : 3rem;
+    --right-margin : 10rem;
+}
+
 body {
     margin : 0;
     padding : 0;
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
 }
 
 /* LEFT CONTENT */
 .content {
     display : flex;
+    min-height: 100vh;
 }
 
 .side-bar {
     position: relative;
-    min-width: 30vw;
-    min-height: 100vh;
+    flex : 2;
     background-image: url(./img/aron-visuals-LSFuPFE9vKE-unsplash.jpg);
     background-position: center center;
     background-color: #464646;
     background-size: cover;
+    color: white;
 }
 
 .title-div{
-    width: 100%;
-    background-color: rgba(0,0,0, 0.3);
-    color : white;
-    position: relative;
-    top : 150px;
     display: flex;
-    gap : 10px;
     justify-content: center;
     align-items: center;
-    padding : 10px 0px;
+    gap : 0.5rem;
+    font-size: 7rem;
+    font-family: 'Six Caps', sans-serif;
+    margin-top: 20vh; 
+    padding : 1rem 1rem;
+    background-color: rgba(0,0,0, 0.3);
+
 }
 
 .logo {
-    height: auto;
-    width: 20%;
+    height: 9rem;
 }
 
 .footer {
     position: absolute;
-    font-size: 0.7rem;
+    font-size: 1rem;
     bottom: 10px;
     left : 50%;
     transform: translateX(-50%);
     white-space:nowrap;
-    color: white;
 }
 
 .side-bar a, a:visited {
     color: white;
 }
 
-
 /* RIGHT CONTENT */
 .main-content {
     display: flex;
+    flex : 5;
     flex-direction: column;
     justify-content: center;
     background-color: rgba(152,201,219, 0.2);
 }
+
+p {
+    font-size: 1.5rem;
+}
+
 .header-content {
-    flex : 0.7;
-    padding : 3rem 7rem 3rem 1.5rem;
     font-size: 1.2rem;
     font-weight: bold;
-    padding-bottom: 0.7rem;
+    margin-left: var(--left-margin);
+    margin-right: var(--right-margin);
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 80%;
+}
+form {
+    margin-left: var(--left-margin);
+    margin-right: var(--right-margin);
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+h2 {
+    margin-bottom: 1.5rem;
 }
 
 .form-div {
-    flex : 1;
     background-color: white;
-    padding-left : 1.5rem;
-    padding-bottom : 2rem; 
     box-shadow: 0px 15px 10px -15px rgb(118, 116, 116);
+    padding-bottom: 2.5rem;
+    
 }
 
 input, label, button, ul, li {
@@ -83,22 +109,31 @@ input, label, button, ul, li {
     margin : 0;
 }
 
+label {
+    font-size: 1.5rem;
+}
+
+input {
+    height: 2rem;
+    padding : 0.2rem 0.5rem;
+}
+
 ul {
     display: grid;
     grid-template-columns: repeat(2, 12.5rem);
     grid-template-rows: repeat(3, 2rem);
-    column-gap: 2.5rem;
-    row-gap: 1.5rem;
+    column-gap: 15rem;
+    row-gap: 5rem;
 }
 li {
     display: grid;
     list-style: none;
+    row-gap: 0.5rem;
 } 
 
 .bottom-content {
-    flex : 0.5;
-    padding-top: 1rem ;
-    padding-left : 1.5rem;
+    margin-left: var(--left-margin);
+    margin-right: var(--right-margin);
 }
 
 .bottom-content a, a.visited {
@@ -120,19 +155,20 @@ button {
     color : white;
     border: none;
     border-radius: 5px;
-    position: relative;
-    top : 2rem;
-    left : 1.5rem;
+    margin-left: var(--left-margin);
+    margin-right: var(--right-margin);
+    margin-top: 2rem;
 } 
 
 .login {
     padding-top: 2rem;
+
 }
 
 
 input[type="password"].error + span::after {
     content : "*Passwords do not match";
-    font-size: 10px;
+    font-size: 1rem;
     color : red;
 
 }
@@ -140,7 +176,7 @@ input[type="password"].error + span::after {
 
 input[type="password"].valid + span::after {
     content : "Passwords match !";
-    font-size: 10px;
+    font-size: 1rem;
     color : green;
 
 }
